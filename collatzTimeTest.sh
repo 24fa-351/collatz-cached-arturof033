@@ -47,7 +47,7 @@ miss=$(echo "$time_output" | grep 'miss:' | awk '{print $2}')
 hit_ratio=$(echo "$time_output" | grep 'ratio:' | awk '{print $3}')
 
 # print time complexity  
-#printf "method, smallest, largest, iterations, cache_size, user_time, sys_time, real_time, hit, miss, hit_ratio, total_time, iteration_mean\n" > collatzCacheTime.csv
+printf "method, smallest, largest, iterations, cache_size, user_time, sys_time, real_time, hit, miss, hit_ratio, total_time, iteration_mean\n" > collatzCacheTime.csv
 printf "$method, $smallest, $largest, $values, $cache_size, $real_time, $user_time, $sys_time, $hit, $miss, $hit_ratio, " > collatzCacheTime.csv
 
 # calculates the total run time of the program
